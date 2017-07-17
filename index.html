@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>例子</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0
+    }
+    
+    .slider-wrap {
+      width: 750px;
+      position: relative;
+      margin: 0 auto;
+      height: 500px;
+    }
+    
+    .slider-contain {
+      overflow: hidden;
+      position: relative;
+      height: 500px;
+    }
+    
+    .slider-content {
+      position: absolute;
+      overflow: hidden;
+    }
+    
+    .slider-content li {
+      float: left;
+    }
+    
+    i {
+      display: inline-block;
+      position: absolute;
+      width: 76px;
+      height: 112px;
+      cursor: pointer
+    }
+    
+    .prev {
+      top: 200px;
+      left: 0;
+      background: url('images/prev.png')
+    }
+    
+    .next {
+      top: 200px;
+      right: 0;
+      background: url('images/next.png')
+    }
+  </style>
+  <script src="demo/js/jquery-3.2.1.min.js"></script>
+  <script src="demojs/mySlider.js"></script>
+</head>
+
+<body>
+  <div>
+    <div class="slider-wrap">
+      <div class="slider-contain">
+        <ul class="slider-content">
+          <li><img src="images/1.jpg" alt=""></li>
+          <li><img src="images/2.jpg" alt=""></li>
+          <li><img src="images/3.jpg" alt=""></li>
+          <li><img src="images/4.jpg" alt=""></li>
+          <li><img src="images/5.jpg" alt=""></li>
+          <li><img src="images/6.jpg" alt=""></li>
+          <li><img src="images/7.jpg" alt=""></li>
+        </ul>
+      </div>
+      <i class="prev"></i>
+      <i class="next"></i>
+    </div>
+  </div>
+  <script>
+    $('.slider-contain').slider({
+      width: 750,
+      numbers: 7,
+      prev: $('.prev'),
+      next: $('.next')
+    })
+  </script>
+</body>
+
+</html>
